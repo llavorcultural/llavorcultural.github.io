@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/dist/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="/assets/css/style.min.css">
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/dist/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-    
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+        });
+
+    </script>
 </head>
+
 <body>
     <div class="page">
         <header>
@@ -19,19 +41,59 @@
                 <ul>
                     <li><a href="/">INICI</a></li>
                     <li><a href="/pagina/manifest.html">MANIFEST</a></li>
-                </ul>                
+                </ul>
             </nav>
         </header>
         <main>
             <div class="owl-carousel">
-                <div><img src="/assets/images/francesc-parcerisas.jpg-400x300.jpg" alt="" srcset=""></div>
-                <div><img src="/assets/images/002-per-Ana-Borja-400x300.jpg" alt="" srcset=""></div>
-                <div><img src="/assets/images/800px-Carl_Van_Vechten_-_William_Faulkner_greyscale_and_cropped-400x300.jpg" alt="" srcset=""></div>
-                <div><img src="/assets/images/foto-de-AURELIA-GONZALEZ-400x300.jpg" alt="" srcset=""></div>
+                <div class="slide">
+                    <div class="post-media"><img src="/assets/images/francesc-parcerisas.jpg-400x300.jpg" alt=""></div>
+                    <div class="post-body">
+                        <div class="post-title">
+                            <h4>
+                                <a href="">Francesc Parcerisas Vázquez: “La traducció és una mica com el teatre, un món
+                                    de ficció que el lector i l’espectador s’han de creure”</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="post-media"><img src="/assets/images/002-per-Ana-Borja-400x300.jpg" alt=""></div>
+                    <div class="post-body">
+                        <div class="post-title">
+                            <h4>
+                                <a href="">Pau Sanchis Ferrer: “Traduir és triar i quan tries hi ha risc (l’aventura), noves coneixences a l’abast (la curiositat) i basarda (el dubte)”</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="post-media"><img
+                            src="/assets/images/800px-Carl_Van_Vechten_-_William_Faulkner_greyscale_and_cropped-400x300.jpg"
+                            alt=""></div>
+                    <div class="post-body">
+                        <div class="post-title">
+                            <h4>
+                                <a href="">El soroll i la fúria, William Faulkner (No-res ho és tot)</a>
+                            </h4>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="slide">
+                    <div class="post-media"><img src="/assets/images/foto-de-AURELIA-GONZALEZ-400x300.jpg" alt=""></div>
+                    <div class="post-body">
+                        <div class="post-title">
+                            <h4>
+                                <a href="http://localhost/llavor/nuria-mirabet-alimentar-se-es-acceptar-la-infinitud/">Núria Mirabet, alimentar-se és acceptar la finitud</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer></footer>
     </div>
 </body>
+
 </html>
