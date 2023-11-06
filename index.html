@@ -7,9 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="/dist/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="/dist/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/dist/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+    <script src="/dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
@@ -20,10 +26,13 @@
                     0: {
                         items: 1
                     },
-                    600: {
+                    700: {
                         items: 2
                     },
                     1000: {
+                        items: 3
+                    },
+                    1500: {
                         items: 4
                     }
                 }
@@ -34,17 +43,21 @@
 </head>
 
 <body>
-    <div class="page">
+    <div class="page-wrap">
+        <!-- Header -->
         <header>
-            <img src="assets/images/cap-llavor.jpg" alt="Logo llavor">
-            <nav>
+            <div class="logo"><img src="assets/images/cap-llavor.jpg" alt="Logo llavor"></div>
+            <nav class="menu">
                 <ul>
-                    <li><a href="/">INICI</a></li>
-                    <li><a href="/pagina/manifest.html">MANIFEST</a></li>
+                    <li class="menu-item current-item"><a href="/">INICI</a></li>
+                    <li class="menu-item"><a href="/pagina/manifest.html">MANIFEST</a></li>
                 </ul>
             </nav>
         </header>
+        <!-- End Header -->
+        <!-- Main -->
         <main>
+            <!-- Carousel -->
             <div class="owl-carousel">
                 <div class="slide">
                     <div class="post-media"><img src="/assets/images/francesc-parcerisas.jpg-400x300.jpg" alt=""></div>
@@ -55,6 +68,9 @@
                                     de ficció que el lector i l’espectador s’han de creure”</a>
                             </h4>
                         </div>
+                        <div class="post-meta">
+                            <span class="post-date">29 de gener de 2022</span>
+                        </div>
                     </div>
                 </div>
                 <div class="slide">
@@ -62,8 +78,12 @@
                     <div class="post-body">
                         <div class="post-title">
                             <h4>
-                                <a href="">Pau Sanchis Ferrer: “Traduir és triar i quan tries hi ha risc (l’aventura), noves coneixences a l’abast (la curiositat) i basarda (el dubte)”</a>
+                                <a href="">Pau Sanchis Ferrer: “Traduir és triar i quan tries hi ha risc (l’aventura),
+                                    noves coneixences a l’abast (la curiositat) i basarda (el dubte)”</a>
                             </h4>
+                        </div>
+                        <div class="post-meta">
+                            <span class="post-date">10 de maig de 2021</span>
                         </div>
                     </div>
                 </div>
@@ -77,22 +97,178 @@
                                 <a href="">El soroll i la fúria, William Faulkner (No-res ho és tot)</a>
                             </h4>
                         </div>
+                        <div class="post-meta">
+                            <span class="post-date">19 d'abril de 2021</span>
+                        </div>
                     </div>
-
                 </div>
                 <div class="slide">
                     <div class="post-media"><img src="/assets/images/foto-de-AURELIA-GONZALEZ-400x300.jpg" alt=""></div>
                     <div class="post-body">
                         <div class="post-title">
                             <h4>
-                                <a href="http://localhost/llavor/nuria-mirabet-alimentar-se-es-acceptar-la-infinitud/">Núria Mirabet, alimentar-se és acceptar la finitud</a>
+                                <a href="http://localhost/llavor/nuria-mirabet-alimentar-se-es-acceptar-la-infinitud/">Núria
+                                    Mirabet, alimentar-se és acceptar la finitud</a>
                             </h4>
+                        </div>
+                        <div class="post-meta">
+                            <span class="post-date">12 d'abril de 2021</span>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- End Carousel -->
+            <div class="container">
+                <div class="row">
+                    <!-- Post Loop -->
+                    <div class="posts-container col-md-9 order-md-2">
+                        <div class="content">
+                            <div class="post row">
+                                <div class="post-media col-md-3">
+                                    <a href=""><img width="400" height="330" src="/assets/images/primer-post-400x330.jpg"
+                                            class="post-image" alt=""></a>
+                                </div>
+                                <div class="post-body col-md-9">
+                                    <div class="post-title">
+                                        <h2><a href="">Neix l’Associació d’Artistes Visuals de la Catalunya Central</a></h2>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="post-date">
+                                            <span class="year">2021</span>/<span class="month">març</span>/<span class="day">31</span>
+                                        </div>
+                                        <div class="pi-toggle_in_archive post-author">
+                                            <div class="image-thumb image-cover"><img src="/assets/images/logollavor-petit.jpg" alt="Llavor Cultural"></div>
+                                            <div class="name-author">Llavor Cultural</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-entry">
+                                        <p>Membres de la Junta Directiva de l’Associació d’Artistes Visuals de la Catalunya Central | Foto: Associació d’Artistes Visuals de la Catalunya Central. L’ entitat va constituir-se el passat 13 de març amb la finalitat de donar veu i vot als professionals del sector de les Arts Visuals del territori central del país. Per fer front…</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post row">
+                                <div class="post-media col-md-3">
+                                    <a href=""><img width="400" height="330" src="/assets/images/segon-post-400x330.jpeg" class="post-image" alt=""></a>
+                                </div>
+                                <div class="post-body col-md-9">
+                                    <div class="post-title">
+                                        <h2><a href="">Les ‘Bases i mantenidorxs’ d’Eduard Reboll, una subversió literària</a></h2>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="post-date">
+                                            <span class="year">2021</span>/<span class="month">març</span>/<span class="day">16</span>
+                                        </div>
+                                        <div class="pi-toggle_in_archive post-author  ">
+                                            <div class="image-thumb image-cover"><img src="/assets/images/susanna.jpg" alt="Llavor Cultural"></div>
+                                            <div class="name-author">Susanna Gonzalez Turigas</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-entry">
+                                        <p>Eduard Reboll ha publicat el poemari ‘Bases i mantenidorxs’ (Parnass Edicions 2020). Susanna González Turigas l’ha llegit i el ressenya a la Llavor Cultural. El poeta Eduard Reboll | Foto: Cedida. El passat mes de setembre a l’Espai Brossa, es va donar a conèixer el llibre Bases i mantenidorxs d’Eduard Reboll, publicat per Parnass Ediciones,…</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post row">
+                                <div class="post-media col-md-3">
+                                    <a href=""><img width="400" height="330" src="/assets/images/tercer-post-400x330.jpg" class="post-image" alt=""></a>
+                                </div>
+                                <div class="post-body col-md-9">
+                                    <div class="post-title">
+                                        <h2><a href="">Claudia Kalász: “Per no perdre la intensitat de l’original, diria que és primordial trobar el to de la veu narradora”</a></h2>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="post-date">
+                                            <span class="year">2021</span>/<span class="month">març</span>/<span class="day">9</span>
+                                        </div>
+                                        <div class="pi-toggle_in_archive post-author  ">
+                                            <div class="image-thumb image-cover"><img src="/assets/images/silvia.jpg" alt="Llavor Cultural"></div>
+                                            <div class="name-author">Sílvia Romero i Olea</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-entry">
+                                        <p>Eduard Reboll ha publicat el poemari ‘Bases i mantenidorxs’ (Parnass Edicions 2020). Susanna González Turigas l’ha llegit i el ressenya a la Llavor Cultural. El poeta Eduard Reboll | Foto: Cedida. El passat mes de setembre a l’Espai Brossa, es va donar a conèixer el llibre Bases i mantenidorxs d’Eduard Reboll, publicat per Parnass Ediciones,…</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post row">
+                                <div class="post-media col-md-3">
+                                    <a href=""><img width="400" height="330" src="/assets/images/quart-post-400x330.jpeg" class="post-image" alt=""></a>
+                                </div>
+                                <div class="post-body col-md-9">
+                                    <div class="post-title">
+                                        <h2><a href="">Els ‘Passatges’ de Miquel Lluís Muntané: paradís i memòria</a></h2>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="post-date">
+                                            <span class="year">2021</span>/<span class="month">febr.</span>/<span class="day">9</span>
+                                        </div>
+                                        <div class="pi-toggle_in_archive post-author  ">
+                                            <div class="image-thumb image-cover"><img src="/assets/images/enric.jpg" alt="Llavor Cultural"></div>
+                                            <div class="name-author">Enric Umbert-Rexach</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-entry">
+                                        <p>Enric Umbert-Rexach s’endinsa en la lectura del darrer llibre de Miquel Lluís Muntané, Passatges (Llibres del Segle, 2020). Miquel Lluís Muntané en una imatge d’arxiu| Foto: Raquel Romero Miquel Lluís Muntané (Barcelona, 1956) és un escriptor d’ampli ventall de gèneres, des de la novel·la, l’assaig, memorialisme, narrativa infantil, la traducció i l’edició. Però on realment…</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post row">
+                                <div class="post-media col-md-3">
+                                    <a href=""><img width="400" height="330" src="/assets/images/cinque-post-400x330.jpeg" class="post-image" alt=""></a>
+                                </div>
+                                <div class="post-body col-md-9">
+                                    <div class="post-title">
+                                        <h2><a href="">Pere Comellas Casanova: “La traducció és una branca més de l’ofici d’escriure”</a></h2>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="post-date">
+                                            <span class="year">2021</span>/<span class="month">gen.</span>/<span class="day">26</span>
+                                        </div>
+                                        <div class="pi-toggle_in_archive post-author  ">
+                                            <div class="image-thumb image-cover"><img src="/assets/images/silvia.jpg" alt="Llavor Cultural"></div>
+                                            <div class="name-author">Sílvia Romero i Olea</div>
+                                        </div>
+                                    </div>
+                                    <div class="post-entry">
+                                        <p>L’escriptora Sílvia Romero entrevista Pere Comellas Casanova dins la secció ‘La veu del traductor’. L’escriptor Pere Comellas | Foto: Víctor Serri. Pere Comellas Casanova (Cal Rosal –Berguedà- 1965) és diplomat en biblioteconomia i documentació. Durant un temps va treballar com a bibliotecari i a l’editorial Virus (Barcelona), i en l’actualitat és professor de l’Àrea d’Estudis…</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End Post Loop -->
+                    <!-- Sidebar -->
+                    <div class="sidebar col-md-3 order-md-1">
+                        <div class="site-definition">
+                            <div class="image">
+                                <img src="/assets/images/logollavor-petit.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h3>LLAVOR CULTURAL</h3>
+                                <p>Som el setmanari cultural de literatura que alimenta l’intel·lecte</p>
+                            </div>
+                        </div>
+                        <div class="generalitat">
+                            <p>Amb el suport de:</p>
+                            <div class="image">
+                                <img src="/assets/images/logo_gencat_cultura.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Sidebar -->
+                </div>
+            </div>
+
+
+
         </main>
-        <footer></footer>
+        <!-- End Main -->
+        <!-- Footer -->
+        <footer>
+            <p>COPYRIGHT © 2021. LLAVOR CULTURAL</p>
+        </footer>
+        <!-- End Footer -->
     </div>
 </body>
 
